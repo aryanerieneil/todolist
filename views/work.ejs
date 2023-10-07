@@ -1,0 +1,30 @@
+<%- include("partials/header.ejs") %>
+
+<div>
+    <ul class="list-group" id="view">
+        <% workList.forEach((item, index) => { %>
+            <li class="list-group-item pt-3">
+                <input class="form-check-input me-1 strikethrough" type="checkbox" value="" id="firstCheckbox">
+                <label class="form-check-label strikeThis h5" for="firstCheckbox" id="listTask"><%= item %></label>
+                <form action="/delete2/<%= index %>" method="POST" style="display: inline;" class="">
+                    <button id="deleteButton" type="submit" class="btn btn-outline-danger mt-1 mr-1">x</button>
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+</div>
+<div class ="row">
+    <div class="">
+        <form action="/submitWork" method="POST" class="">
+            <input type="text" class="form-control" name="task" placeholder="Create new task" aria-label="Create new task" aria-describedby="button-addon2" id="inputText">
+            <button class="btn btn-outline-secondary col-12" type="submit" id="button-addon2">Add</button>
+        </form>
+    </div>
+    <div class ="">
+        <form action="/clearWork" method="post" class="">
+            <button class="btn btn-outline-secondary col-12" type="submit" id="button-clearon2">Clear</button>
+        </form>
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>

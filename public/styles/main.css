@@ -1,0 +1,30 @@
+
+.strikethrough:checked + .strikeThis {
+    text-decoration: line-through;
+    color: #a7a5a5
+  }
+
+ 
+
+  .nav-link.clicked {
+    /* CSS styles for the button when clicked */
+    color: white;
+    background-color: #39606b;
+  }
+
+  #deleteButton{
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 5px;
+    outline: none;
+    border:none;
+  
+  }
+
+  #button-addon2{
+    background-color: rgb(67, 102, 216);
+    color: white;
+    border:none;
+    outline:none;
+  }
